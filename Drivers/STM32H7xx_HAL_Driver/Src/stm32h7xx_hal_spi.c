@@ -931,12 +931,12 @@ HAL_StatusTypeDef HAL_SPI_TransmitReceive(SPI_HandleTypeDef *hspi, uint8_t *pTxD
     return errorcode;
   }
 
-  if ((pTxData == NULL) || (pRxData == NULL) || (Size == 0U))
-  {
-    errorcode = HAL_ERROR;
-    __HAL_UNLOCK(hspi);
-    return errorcode;
-  }
+//  if ((pTxData == NULL) || (pRxData == NULL) || (Size == 0U))
+//  {
+//    errorcode = HAL_ERROR;
+//    __HAL_UNLOCK(hspi);
+//    return errorcode;
+//  }
 
   /* Don't overwrite in case of HAL_SPI_STATE_BUSY_RX */
   if (hspi->State != HAL_SPI_STATE_BUSY_RX)
